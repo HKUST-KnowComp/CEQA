@@ -1,5 +1,5 @@
 # Complex Eventuality Query Answering (CEQA)
-Official Implementation of paper: [Complex Query Answering on Eventuality Knowledge Graph with Implicit Logical Constraints](https://arxiv.org/abs/2305.19068). Add the sampled data are available here. If you would like to build your own query data, you can use the following instructions for data sampling. Note that you may need to adjust the directories in the python scripts.
+Official Implementation of paper: [Complex Query Answering on Eventuality Knowledge Graph with Implicit Logical Constraints](https://arxiv.org/abs/2305.19068). If you would like to build your own query data, you can use the following instructions for data sampling. Note that you may need to adjust the directories in the Python scripts.
 
 
 ## Data Sampling
@@ -13,29 +13,29 @@ python sample_all_types_aser_train.py
 python sample_all_types_aser_validation.py
 python sample_all_types_aser_test.py
 ```
-After this step, you will get many query files in the directory ``` ./query_data ``` (we provide a small data in the same formate in ```./query_data_dev``` for debugging and unit testing)
+After this step, you will get many query files in the directory ``` ./query_data ``` (we provide a small data in the same format in ```./query_data_dev``` for debugging and unit testing)
 
 ### Sample Informational Atomics & Theorem Proving
 
-These two steps are combined together, we sample some informational atomics for each query, and then use the theorem provers to filter out the answers that are contradictory. 
+These two steps are combined together, we sample some informational atomics for each query and then use the theorem provers to filter out the answers that are contradictory. 
 
 ```
 python filter_explanation.py
 ```
 
-After this step, you will get the data files used for training and evaluation in the directory ``` ./query_data_filtered ``` (Similarly, we provide a small data in the same formate in ```./query_data_dev_filtered``` for debugging and unit testing)
+After this step, you will get the data files used for training and evaluation in the directory ``` ./query_data_filtered ``` (Similarly, we provide a small data in the same format in ```./query_data_dev_filtered``` for debugging and unit testing)
 
 
 ### Query Encoding with Memory Constraints
 
-We implement all the models in ```./model```. In each model file, we have their original implementation, and the inherented memory enhanced version. For running the experiments, simply by using:
+We implement all the models in ```./model```. In each model file, we have their original implementation and the inherited memory-enhanced version. For running the experiments, simply by using:
 
 ```
 ./run_gqe.sh
 ./run_gqe_con.sh
 ```
-The ```_con.sh``` are constraint memory enhanced model. You can replace ```gqe``` with ```q2p```, ```mlp```, and ```fuzzqe``` respectively. 
-To monitor the training and evaluation process, you can usek the tensorboard at logdir ```../logs/gradient_tape```
+The ```_con.sh``` are constraint memory-enhanced models. You can replace ```gqe``` with ```q2p```, ```mlp```, and ```fuzzqe``` respectively. 
+To monitor the training and evaluation process, you can use the tensorboard at log dir ```../logs/gradient_tape```
 
 
 ### Citation
