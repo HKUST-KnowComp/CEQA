@@ -36,7 +36,7 @@ def sample_train_data(id):
         original_query_types[fid] = query
     
 
-    input_graph_names = ["/home/data/jbai/aser_graph/aser50k_train.pickle"]
+    input_graph_names = ["./aser50k_train.pickle"]
 
     for train_graph_name in input_graph_names:
         train_graph = nx.read_gpickle(train_graph_name)
@@ -97,8 +97,8 @@ def sample_valid_data(id):
         original_query_types[fid] = query
 
 
-    input_graph_names = [["/home/data/jbai/aser_graph/aser50k_train.pickle",
-    "/home/data/jbai/aser_graph/aser50k_valid.pickle"]]
+    input_graph_names = [["./aser50k_train.pickle",
+    "./aser50k_valid.pickle"]]
 
 
     for train_graph_name, valid_graph_name in input_graph_names:
@@ -163,8 +163,8 @@ def sample_test_data(id):
     # input_graph_names = [["/home/data/jbai/aser_graph/aser15k_train.pickle",
     # "/home/data/jbai/aser_graph/aser15k_valid.pickle", "/home/data/jbai/aser_graph/aser15k_test.pickle"]]
 
-    input_graph_names = [["/home/data/jbai/aser_graph/aser50k_train.pickle",
-    "/home/data/jbai/aser_graph/aser50k_valid.pickle", "/home/data/jbai/aser_graph/aser50k_test.pickle"]]
+    input_graph_names = [["./aser50k_train.pickle",
+    "./aser50k_valid.pickle", "./aser50k_test.pickle"]]
 
 
     for train_graph_name, valid_graph_name, test_graph_name in input_graph_names:
