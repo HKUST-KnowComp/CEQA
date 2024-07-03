@@ -233,8 +233,8 @@ if __name__ == "__main__":
 
 
 
-    input_graph_names = [["/home/data/jbai/aser_graph/aser50k_train.pickle",
-    "/home/data/jbai/aser_graph/aser50k_valid.pickle", "/home/data/jbai/aser_graph/aser50k_test.pickle"]]
+    input_graph_names = [["./aser50k_train.pickle",
+    "./aser50k_valid.pickle", "./aser50k_test.pickle"]]
 
 
     start_time = time.time()
