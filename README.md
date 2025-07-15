@@ -3,7 +3,7 @@ Official Implementation of paper: [Complex Query Answering on Eventuality Knowle
 
 
 ## Data Sampling
-All sampled & filtered data can be downloaded [here](https://drive.google.com/file/d/1vQ3MB3-ejT78aPZFOFWwnjwtq-MhLUJv/view?usp=sharing), and you do not have to run the sampling code by yourself. The data we used in this paper is subsampled from [ASER2.1](https://hkust-knowcomp.github.io/ASER/html/index.html), and it is called ASER-50k. The ASER-50K graph is available in the data file. 
+All sampled & filtered data can be downloaded [here](https://drive.google.com/file/d/14tWruIrtzeE3yv0T3db3r33VTciWJZo3/view?usp=sharing), and you do not have to run the sampling code by yourself. The data we used in this paper is subsampled from [ASER2.1](https://hkust-knowcomp.github.io/ASER/html/index.html), and it is called ASER-50k. The ASER-50K graph is available in the data file. 
 
 ### Query Sampling (without informational atomics)
 In the first step, we sample the complex queries (without informational atomics) from the ASER-50K by running the file:
